@@ -2,7 +2,9 @@
 
 authoritative;
 
-ddns-update-style none;
+ddns-update-style interim;
+ddns-domainname "iescalquera.local";
+update-static-leases on;
 
 option domain-name "iescalquera.local";
 option domain-name-servers 172.16.5.10;
@@ -16,9 +18,10 @@ subnet 172.16.5.0 netmask 255.255.255.0 {
 }
 
 host uclient02 {
-  hardware 08:00:27:1A:fd:91;
+  hardware ethernet 08:00:27:1A:FD:91;
   fixed-address 172.16.5.121;
   option host-name "uclient02";
+  ddns-hostname "uclient02";
 }
 
 #
